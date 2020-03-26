@@ -1,0 +1,56 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> 1-(0.23+0.14+0.16+0.20)
+[1] 0.27
+> a<- 4.4, 5.3, 4.4, 2.8, 0.9, 6.1, 3.0, 8.6, 10.7, 4.3, 1.9, 12.0, 5.9, 4.8, 7.7
+Error: unexpected ',' in "a<- 4.4,"
+> a <- 4.4, 5.3, 4.4, 2.8, 0.9, 6.1, 3.0, 8.6, 10.7, 4.3, 1.9, 12.0, 5.9, 4.8, 7.7
+Error: unexpected ',' in "a <- 4.4,"
+> a <- c(4.4, 5.3, 4.4, 2.8, 0.9, 6.1, 3.0, 8.6, 10.7, 4.3, 1.9, 12.0, 5.9, 4.8, 7.7)
+> var(a)
+[1] 9.736
+> x<-0:2
+> dpoia(1,0.66)
+Error in dpoia(1, 0.66) : could not find function "dpoia"
+> dpois(1,0.66)
+[1] 0.3411219
+> x<-1:2
+> dpois(1,0.66)
+[1] 0.3411219
+> 3.5/9.3
+[1] 0.3763441
+> 
+> 
+> 
+> 
+> 
+> 0.3993+0.2637
+[1] 0.663
+> 2*0.66
+[1] 1.32
+> var(0.66)
+[1] NA
+> var(0.66)
+[1] NA
+> var(1)
+[1] NA
+> 

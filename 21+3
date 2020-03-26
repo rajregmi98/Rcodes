@@ -1,0 +1,52 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> x <- c (11.9, 11.0, 12.4, 16.9, 16.3, 13.3, 9.1, 17.0, 11.0, 9.3, 25.3, 17.4, 17.4)
+> median(x)
+[1] 13.3
+> boxplot(x)
+> outlier(x)
+Error in outlier(x) : could not find function "outlier"
+> outlier(x)
+Error in outlier(x) : could not find function "outlier"
+> O = boxplot(x)$out
+> O
+numeric(0)
+> ex2 (1) <- read.csv("ex2 (1).csv")
+Error in ex2(1) <- read.csv("ex2 (1).csv") : 
+  target of assignment expands to non-language object
+> ex2 (1) <- read.csv("ex2 (1).csv")
+Error in ex2(1) <- read.csv("ex2 (1).csv") : 
+  target of assignment expands to non-language object
+> ex2 (1) <- read.csv("ex2 (1).csv")
+Error in ex2(1) <- read.csv("ex2 (1).csv") : 
+  target of assignment expands to non-language object
+> ex2 (1) <- read.csv("ex2 (1).csv")
+Error in ex2(1) <- read.csv("ex2 (1).csv") : 
+  target of assignment expands to non-language object
+> ex2 (1) <- read.csv("ex2 (1).csv")
+Error in ex2(1) <- read.csv("ex2 (1).csv") : 
+  target of assignment expands to non-language object
+> r <- read.csv("r.csv")
+> sd(r)
+Error in is.data.frame(x) : 
+  'list' object cannot be coerced to type 'double'
+> 

@@ -1,0 +1,115 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> pop1<-read.csv("pop1.csv")
+> x.samp<-sample(pop1$height,100)
+> x.samp
+  [1] 186 172 191 174 155 167 168 157 159 166 168 170 176 168 164 171 192 154
+ [19] 185 192 157 162 179 154 177 162 182 189 175 168 163 160 167 168 194 183
+ [37] 173 169 156 163 161 181 159 172 185 177 165 187 166 161 152 180 190 175
+ [55] 158 168 193 171 170 187 164 174 178 173 172 154 171 170 164 179 193 167
+ [73] 163 166 184 157 188 174 161 157 154 165 169 177 178 176 181 165 186 164
+ [91] 172 173 182 164 159 189 160 176 161 188
+> mean(x.samp)
+[1] 171.42
+> mean(pop1$height)
+[1] 170.035
+> x.samp<-sample(pop1$height,100)
+> x.bar<-mean(x.samp)
+> x.bar
+[1] 169.7
+> x.sample<-sample(pop1$height,100)
+> x.bar<-mean(x.samp)
+> x.bar
+[1] 169.7
+> x.bar<-rep(0,10^5)
+> for(i in 1:10^5)
++ {
++ x.samp<-sample(pop1$height,100)
++ x.bar[i]<-mean(x.samp)
++ }
+> hist(x.bar)
+> mean(pop1$height)
+[1] 170.035
+> mean(x.bar)
+[1] 170.045
+> sd(x.bar)
+[1] 1.12095
+> mean(abs(x.bar-mean(pop1$height))<=1)
+[1] 0.62874
+> x.bar<-rep(0,10^5)
+> for(i in 1:10^5)
++ {
++ x.samp<-rbinom(64,10,0.5)
++ x.bar[i]<-mean(x.samp)
++ }
+> hist(x.bar)
+> mean(x.bar)
+[1] 4.999837
+> sd(x.bar)
+[1] 0.1977824
+> quantile(x.bar,c(0.025,0.975))
+    2.5%    97.5% 
+4.609375 5.390625 
+> qnorm(c(0.025,0.975)
++ f
+Error: unexpected symbol in:
+"qnorm(c(0.025,0.975)
+f"
+> qnorm(c(0.025,0.975))
+[1] -1.959964  1.959964
+> mean(x.bar,sd(x.bar)
++ f
+Error: unexpected symbol in:
+"mean(x.bar,sd(x.bar)
+f"
+> mean(x.bar,sd(x.bar))
+[1] 4.999633
+> unif.10<-rep(0,10^5)
+> unif.100<-rep(0,10^5)
+> unif.1000<-rep(0,10^5)
+> for(i in 1:10^5)
++ {
++ x.samp.10<-runif(10,3,7)
++ unif.10[i]<-mean(x.samp.10)
++ x.samp.100[i]<-runif(100,3,7)
++ unif.100[i]<-mean(x.samp.100)
++ x.samp.1000<-runif(1000,3,7)
++ unif.1000[i]<-mean(x.samp.1000)
++ }
+Error: object 'x.samp.100' not found
+> mean(unif.10)
+[1] 5.029491e-05
+> mean(unif,100)
+Error in mean(unif, 100) : object 'unif' not found
+> mean(unif.100)
+[1] 0
+> mean(unif.1000)
+[1] 0
+> mean(unif.10)
+[1] 5.029491e-05
+> var(unif.10)
+[1] 0.0002529578
+> var(unif.100)
+[1] 0
+> var(unif.1000)
+[1] 0
+> 

@@ -1,0 +1,137 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> dbinom(c(1,3,5,7,9),10,0.5)
+[1] 0.009765625 0.117187500 0.246093750 0.117187500 0.009765625
+> dbinom(c(1,3,5,7,9),10,0.1667)
+[1] 3.229595e-01 1.550950e-01 1.303423e-02 2.483903e-04 8.283651e-07
+> dbinom(c(1,3,5,7,9),10,0.6)
+[1] 0.001572864 0.042467328 0.200658125 0.214990848 0.040310784
+> dbinom(c(1,3,5,7,9),10,0.5)
+[1] 0.009765625 0.117187500 0.246093750 0.117187500 0.009765625
+> dbinom(c(0,2,4,6,8),9,0.5)
+[1] 0.001953125 0.070312500 0.246093750 0.164062500 0.017578125
+> dbinom(c(5,6,8,9,4),8,0.5)
+[1] 0.21875000 0.10937500 0.00390625 0.00000000 0.27343750
+> dbinom(c(1,3,5,7,9),10,0.5)
+[1] 0.009765625 0.117187500 0.246093750 0.117187500 0.009765625
+> sum(dbinom(c(1,3,5,7,9),10,0.5)
++ 4
+Error: unexpected numeric constant in:
+"sum(dbinom(c(1,3,5,7,9),10,0.5)
+4"
+> sum(dbinom(c(1,3,5,7,9),10,0.5)
++ 
++ 4
+Error: unexpected numeric constant in:
+"
+4"
+> sum(dbinom(c(1,3,5,7,9),10,0.5))
+[1] 0.5
+> dbinom(c(1,3,5,7,9),10,0.5)
+[1] 0.009765625 0.117187500 0.246093750 0.117187500 0.009765625
+> sum(dbinom(c(1,3,5,7,9),10,0.5))\
+Error: unexpected input in "sum(dbinom(c(1,3,5,7,9),10,0.5))\"
+> sum(dbinom(c(1,3,5,7,9),10,0.5))
+[1] 0.5
+> x<-0:10
+> dbinom(x,10,0.5)
+ [1] 0.0009765625 0.0097656250 0.0439453125 0.1171875000 0.2050781250
+ [6] 0.2460937500 0.2050781250 0.1171875000 0.0439453125 0.0097656250
+[11] 0.0009765625
+> pbinom(x,10,0.5)
+ [1] 0.0009765625 0.0107421875 0.0546875000 0.1718750000 0.3769531250
+ [6] 0.6230468750 0.8281250000 0.9453125000 0.9892578125 0.9990234375
+[11] 1.0000000000
+> cumsum(dbinom(x,10,0.5)
++ 
++ sa
+Error: unexpected symbol in:
+"
+sa"
+> cumsum(dbinom(x,10,0.5))
+ [1] 0.0009765625 0.0107421875 0.0546875000 0.1718750000 0.3769531250
+ [6] 0.6230468750 0.8281250000 0.9453125000 0.9892578125 0.9990234375
+[11] 1.0000000000
+> x.val<-0:10
+> p.val<-dbinom(x.val,10,0.5)
+> EX<- sum(x.val*p.val)
+> EX
+[1] 5
+> sum((x.val-EX)^2*p.val)
+[1] 2.5
+> dbinom(x,10,1/6)
+ [1] 1.615056e-01 3.230112e-01 2.907100e-01 1.550454e-01 5.426588e-02
+ [6] 1.302381e-02 2.170635e-03 2.480726e-04 1.860544e-05 8.269086e-07
+[11] 1.653817e-08
+> x<-0:10
+> dpois(x,2)
+ [1] 1.353353e-01 2.706706e-01 2.706706e-01 1.804470e-01 9.022352e-02
+ [6] 3.608941e-02 1.202980e-02 3.437087e-03 8.592716e-04 1.909493e-04
+[11] 3.818985e-05
+> ppois(x,2)
+ [1] 0.1353353 0.4060058 0.6766764 0.8571235 0.9473470 0.9834364 0.9954662
+ [8] 0.9989033 0.9997626 0.9999535 0.9999917
+> x.val<-0:10
+> p.val<-dpois(x.val,2)
+> sum(x.val*p.val)
+[1] 1.999907
+> x.val<-0:10
+> p.val<-dpois(x.val,2)
+> EX<-sum(x.val*p.val)
+> EX
+[1] 1.999907
+> sum(x.val-EX)^2*p.val
+ [1] 147.38926078 294.77852155 294.77852155 196.51901437  98.25950718
+ [6]  39.30380287  13.10126762   3.74321932   0.93580483   0.20795663
+[11]   0.04159133
+> dunif(0:10,3,7)
+ [1] 0.00 0.00 0.00 0.25 0.25 0.25 0.25 0.25 0.00 0.00 0.00
+> dunif(4:73,3,7)
+ [1] 0.25 0.25 0.25 0.25 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+[16] 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+[31] 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+[46] 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+[61] 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+> dunif(4.73,3,7)
+[1] 0.25
+> punif(4.73,3,7)
+[1] 0.4325
+> x<-seq(0,10,length=1000)
+> den<-dunif(x,3,7)
+> plot(x,den)
+> plot(x,den,type="1")
+Error in plot.xy(xy, type, ...) : invalid plot type '1'
+> plot(x,den,type= '1')
+Error in plot.xy(xy, type, ...) : invalid plot type '1'
+> plot(x,den,type="l")
+> cdf<-punif(x,3.7)
+Warning message:
+In punif(x, 3.7) : NaNs produced
+> cdf<-punif(cdf <- punif(x,3,7)x,3.7)
+
+> cdf <- punif(x,3,7)
+> plot(x,cdf,type="1")
+Error in plot.xy(xy, type, ...) : invalid plot type '1'
+> plot(x,cdf,type="l")
+> pexp(6,0.5)-pexp(2,0.5)
+[1] 0.3180924
+> 

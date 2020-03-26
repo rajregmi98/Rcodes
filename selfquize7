@@ -1,0 +1,50 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> mu<-170.035
+> sig<- 1.122
+> pnorm(mu+2,mu,sig) - pnorm(mu-2,mu,sig)
+[1] 0.9253374
+> qnorm(0.95)
+[1] 1.644854
+> pnorm(mu,169,sig)
+[1] 0.8218556
+> pnorm(169,mu,sig)
+[1] 0.1781444
+> pnorm(10,10.53,2/sqrt(36))
+[1] 0.0559174
+> pnorm(145,145,14/sqrt(49))-pnorm(143,145,14/sqrt(49))
+[1] 0.3413447
+> qnorm(0.9,145,14/sqrt(49))
+[1] 147.5631
+> qnorm(0.75,145,14/sqrt(49))-qnorm(0.25,145,14/sqrt(49))
+[1] 2.697959
+> qnorm(0.90,12.5,7.216878/sqrt(25))
+[1] 14.34976
+> pnorm(7,7.4,0.35118)
+[1] 0.127348
+> ppois(6,7.4)
+[1] 0.3919617
+> qnorm(0.95)
+[1] 1.644854
+> 1-pnorm(4,3.5,0.418337)
+[1] 0.1160028
+> 

@@ -1,0 +1,80 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> ex1<-read.csv("ex1.csv")
+> summary(ex1)
+       id              sex         height     
+ Min.   :1538611   FEMALE:54   Min.   :117.0  
+ 1st Qu.:3339583   MALE  :46   1st Qu.:158.0  
+ Median :5105620               Median :171.0  
+ Mean   :5412367               Mean   :170.1  
+ 3rd Qu.:7622236               3rd Qu.:180.2  
+ Max.   :9878130               Max.   :208.0  
+> pop1<-read.csv("pop1.csv")
+> summary(pop1)
+       id              sex            height   
+ Min.   :1000082   FEMALE:48888   Min.   :117  
+ 1st Qu.:3254220   MALE  :51112   1st Qu.:162  
+ Median :5502618                  Median :170  
+ Mean   :5502428                  Mean   :170  
+ 3rd Qu.:7757518                  3rd Qu.:178  
+ Max.   :9999937                  Max.   :217  
+> sample(pop1$height,1)
+[1] 186
+> sample(pop1$height,1)
+[1] 172
+> sample(pop1$height,1)
+[1] 191
+> sample(pop1$height,1)
+[1] 174
+> sample(pop1$height,1)
+[1] 155
+> ex1<-read.csv("ex1.csv")
+> 
+> hist(ex1$height)
+> a <-c(0,1,2,3,4)
+> f<-c(5,8,6,7,4)
+> sum(f)
+[1] 30
+> r = f/sum(f)
+> r
+[1] 0.1666667 0.2666667 0.2000000 0.2333333 0.1333333
+> m = sum(a*r)
+> m
+[1] 1.9
+> s = f*(a-m)^2
+> s
+[1] 18.05  6.48  0.06  8.47 17.64
+> ss=sum(s)
+> ss
+[1] 50.7
+> v = ss/sum(f)-1
+> v
+[1] 0.69
+> v = ss/(sum(f)-1)
+> v
+[1] 1.748276
+> sd = sqr(v)
+Error in sqr(v) : could not find function "sqr"
+> sd = sqrt(v)
+> sd
+[1] 1.322224
+> 

@@ -1,0 +1,90 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> summary(pop1)
+Error in summary(pop1) : object 'pop1' not found
+> pop1<-read.csv("pop1.csv")
+> summary(pop1)
+       id              sex            height   
+ Min.   :1000082   FEMALE:48888   Min.   :117  
+ 1st Qu.:3254220   MALE  :51112   1st Qu.:162  
+ Median :5502618                  Median :170  
+ Mean   :5502428                  Mean   :170  
+ 3rd Qu.:7757518                  3rd Qu.:178  
+ Max.   :9999937                  Max.   :217  
+> pop2<-read.csv("pop2.csv")
+> summary(pop2)
+       id              sex             age             bmi        
+ Min.   :1000050   FEMALE:50032   Min.   :20.00   Min.   : 9.986  
+ 1st Qu.:3227516   MALE  :49968   1st Qu.:32.00   1st Qu.:22.081  
+ Median :5479268                  Median :35.00   Median :24.819  
+ Mean   :5482739                  Mean   :34.98   Mean   :24.984  
+ 3rd Qu.:7721878                  3rd Qu.:38.00   3rd Qu.:27.704  
+ Max.   :9999889                  Max.   :54.00   Max.   :46.232  
+    systolic        diastolic         group      
+ Min.   : 73.37   Min.   : 24.77   HIGH  :28126  
+ 1st Qu.:116.33   1st Qu.: 72.62   LOW   : 4215  
+ Median :124.64   Median : 81.27   NORMAL:67659  
+ Mean   :125.02   Mean   : 81.67                 
+ 3rd Qu.:133.22   3rd Qu.: 90.30                 
+ Max.   :191.65   Max.   :152.34                 
+> x= sd(pop2$systolic)
+> x
+[1] 12.49025
+> y= s.d(pop2$diastolic)
+Error in s.d(pop2$diastolic) : could not find function "s.d"
+> y= sd(pop2$diastolic)
+> y
+[1] 13.10141
+> z=y-x
+> z
+[1] 0.6111588
+> sd(pop2$systolic-pop2$diastolic)
+[1] 3.950757
+> pop2<-read.csv("pop2.csv")
+> var(pop2$diastolic)
+[1] 171.6469
+> summary(pop2$group)
+  HIGH    LOW NORMAL 
+ 28126   4215  67659 
+> 
+
+> 
+> y <- c(1.5,4,5.5,6,7.5,10)
+> p <- c(0.15,.36,0.1,0.23,0.11,0.05)
+> sum(Y*P)
+Error: object 'Y' not found
+> sum( Y * P)
+Error: object 'Y' not found
+> sum( y * P)
+Error: object 'P' not found
+> sum( y*P)
+Error: object 'P' not found
+> sum( y*p)
+[1] 4.92
+> var ,<- sum(y - E)^2 *p
+Error: unexpected ',' in "var ,"
+> var <- sum(y - E)^2 *p
+Error: object 'E' not found
+> var <- sum(y - sum(y*p))^2 *p
+> sqrt(var)
+[1] 1.928746 2.988000 1.574814 2.388324 1.651679 1.113562
+> 
